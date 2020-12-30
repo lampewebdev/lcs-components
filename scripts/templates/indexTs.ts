@@ -1,5 +1,5 @@
 
-module.exports = ({newPackageName}: {newPackageName: string}): string => {
+export default ({newPackageName}: {newPackageName: string}): string => {
   return `import { App } from 'vue'
 import button from './src/index.vue'
   

@@ -1,15 +1,16 @@
-#!/usr/bin/env ts-node-script
+import yargs from 'yargs/yargs'
+import chalk from 'chalk'
+import fs from 'fs'
 
-const yargs = require('yargs/yargs')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { hideBin } = require('yargs/helpers')
+
 const argv = yargs(hideBin(process.argv)).argv
-const chalk = require('chalk');
-const fs = require('fs')
 
 // Variables
-const packagesFolder = __dirname.substr(0,__dirname.lastIndexOf('/'))+'/packages/';
-const newPackageName = argv._[0];
-const newPackagePath = packagesFolder + newPackageName;
+const packagesFolder: string = __dirname.substr(0,__dirname.lastIndexOf('/'))+'/packages/';
+const newPackageName: string = argv._[0] as string;
+const newPackagePath: string  = packagesFolder + newPackageName;
 
 // Check if the name is valod
 const validNMPPackageNAme = /^(@[a-z0-9-~][a-z0-9-._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/
@@ -29,9 +30,9 @@ console.log('Creating ' + chalk.red(newPackageName) + '!')
 fs.mkdirSync(newPackagePath, { recursive: true });
 fs.mkdirSync(newPackagePath + '/src', { recursive: true });
 
-const indexVue: Function = require('./templates/indexVue.ts')
-const packageJson: Function = require('./templates/packageJson.ts')
-const indexTs: Function = require('./templates/indexTs.ts') 
+import indexVue from './templates/indexVue'
+import packageJson from './templates/packageJson'
+import indexTs from './templates/indexTs' 
 
 const filesToCreate = [
   {
@@ -51,7 +52,7 @@ const filesToCreate = [
 filesToCreate.forEach(file => {
   const fileBuffer = new Uint8Array(Buffer.from(file.content));
   fs.writeFileSync(newPackagePath + file.filepath, fileBuffer);
-  console.log(`creating ${newPackagePath}${file.filepath}`);
+  console.log(`✅ created ${newPackagePath}${file.filepath}`);
 });
 
 console.log('🚀 done creating' + chalk.red(newPackageName) + '!')

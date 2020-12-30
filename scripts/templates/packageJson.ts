@@ -1,4 +1,4 @@
-module.exports = ({newPackageName}: {newPackageName: string}): string => {
+export default ({newPackageName}: {newPackageName: string}): string => {
   return `{
   "name": "@lcs-components/${newPackageName}",
   "version": "0.0.0",

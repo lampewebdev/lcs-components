@@ -1,4 +1,4 @@
-module.exports = ({newPackageName}: {newPackageName: string}): string => {
+export default ({newPackageName}: {newPackageName: string}): string => {
   return `<template>
   <div class="button">
       
