@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "lint": "eslint ./packages --ext .vue,.ts",
+    "lint": "lerna run lint --parallel --stream",
     "lint:fix": "npm run lint -- --fix",
     "new": "ts-node --project ./scripts/tsconfig.json ./scripts/new.ts"
   },
