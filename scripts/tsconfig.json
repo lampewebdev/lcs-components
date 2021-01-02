@@ -3,6 +3,8 @@
   "compilerOptions": {
     "module": "CommonJS"
   },
-  "include": ["./**/*"],
+  "include": [
+    "./**/*",
+    "../typings/**/*"
+  ],
 }
-  
