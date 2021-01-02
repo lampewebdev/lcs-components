@@ -1,4 +1,4 @@
-export default ({newPackageName}: {newPackageName: string}): string => {
+export default ({ newPackageName }: { newPackageName: string }): string => {
   return `{
   "name": "@lcs-components/${newPackageName}",
   "version": "0.0.0",
@@ -10,5 +10,5 @@ export default ({newPackageName}: {newPackageName: string}): string => {
   "devDependencies": {
     "@vue/test-utils": "^2.0.0-beta.13"
   }
-}`
-}
+}`;
+};
