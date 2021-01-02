@@ -1,9 +1,10 @@
-export default ({ newPackageName }: { newPackageName: string }): string => {
+export default ({ packageName }: { packageName: string }): string => {
   return `import { App } from "vue";
-import ${newPackageName} from "./src/index.vue";
+import ${packageName} from "./src/index.vue";
 
-button.install = (app: App): void => {
-  app.component(${newPackageName}.name, ${newPackageName});
+${packageName}.install = (app: App): void => {
+  app.component(${packageName}.name, ${packageName});
 };
-export default button;`;
+export default ${packageName};
+`;
 };

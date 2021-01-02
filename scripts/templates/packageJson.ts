@@ -1,6 +1,6 @@
-export default ({ newPackageName }: { newPackageName: string }): string => {
+export default ({ packageName }: { packageName: string }): string => {
   return `{
-  "name": "@lcs-components/${newPackageName}",
+  "name": "@lcs-components/${packageName}",
   "version": "0.0.0",
   "main": "dist/index.js",
   "license": "MIT",

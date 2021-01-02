@@ -1,6 +1,6 @@
-export default ({ newPackageName }: { newPackageName: string }): string => {
+export default ({ packageName }: { packageName: string }): string => {
   return `<template>
-  <div class="lcs-${newPackageName}">
+  <div class="lcs-${packageName}">
     <!-- your html -->
   </div>
 </template>
@@ -8,7 +8,7 @@ export default ({ newPackageName }: { newPackageName: string }): string => {
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
-  name: "lcs-${newPackageName}",
+  name: "Lcs${packageName}",
   props: {},
   setup() {
     // your code
@@ -17,7 +17,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.lcs-${newPackageName} {
+.lcs-${packageName} {
   /* your style */
 }
 </style>
