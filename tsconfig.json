@@ -1,4 +1,8 @@
 {
+  "include": ["./packages/**/*", "./typings/**/*", "./playground/**/*"],
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     /* Basic Options */
@@ -12,7 +16,7 @@
     // "incremental": true,                   /* Enable incremental compilation */
     // "allowJs": true,                       /* Allow javascript files to be compiled. */
     // "checkJs": true,                       /* Report errors in .js files. */
-    // "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
     // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
@@ -49,7 +53,17 @@
     // "paths": {},                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                       /* List of folders to include type definitions from. */
-    // "types": [],                           /* Type declaration files to be included in compilation. */
+    "types": [
+      "node",
+      "yargs",
+      "@vue/compiler-core/dist/compiler-core",
+      "@vue/compiler-dom/dist/compiler-dom",
+      "@vue/compiler-sfc/dist/compiler-sfc",
+      "@vue/compiler-ssr/dist/compiler-ssr",
+      "@vue/reactivity/dist/reactivity",
+      "@vue/runtime-core/dist/runtime-core",
+      "@vue/runtime-dom/dist/runtime-dom"
+    ],                           /* Type declaration files to be included in compilation. */
     "allowSyntheticDefaultImports": true,     /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
     // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks. */
     // "allowUmdGlobalAccess": true,          /* Allow accessing UMD globals from modules. */
@@ -67,9 +81,5 @@
     /* Advanced Options */
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
-  },
-  "include": ["./packages/**/*", "./typings/**/*"],
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }

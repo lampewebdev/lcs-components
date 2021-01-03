@@ -1,0 +1,17 @@
+{
+  "name": "playground",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "npx eslint -f codeframe --config='../../.eslintrc.js' --ext ts,vue ./"
+  },
+  "dependencies": {
+    "@lcs-components/button": "file:../packages/button",
+    "@lcs-components/theme-default": "file:../packages/theme-default",
+    "@lcs-components/heading": "file:../packages/heading"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0"
+  }
+}
