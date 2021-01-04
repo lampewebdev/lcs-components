@@ -10,11 +10,12 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: ["@typescript-eslint", "prettier"],
+  plugins: ["@typescript-eslint", "prettier", "vuejs-accessibility"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:vuejs-accessibility/recommended",
     "plugin:vue/vue3-recommended",
     "prettier",
     "prettier/@typescript-eslint",

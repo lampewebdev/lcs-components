@@ -6,10 +6,17 @@ import fs from "fs";
 const { hideBin } = require("yargs/helpers");
 
 const argv = yargs(hideBin(process.argv)).argv;
+const isWin: boolean = process.platform === "win32";
 
 // Variables
-const packagesFolder: string =
-  __dirname.substr(0, __dirname.lastIndexOf("/")) + "/packages/";
+let packagesFolder = "";
+if (isWin) {
+  packagesFolder =
+    __dirname.substr(0, __dirname.lastIndexOf("\\")) + "\\packages\\";
+} else {
+  packagesFolder =
+    __dirname.substr(0, __dirname.lastIndexOf("/")) + "/packages/";
+}
 const newPackageName: string = argv._[0] as string;
 const newPackagePath: string = packagesFolder + newPackageName;
 

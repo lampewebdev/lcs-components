@@ -1,7 +1,7 @@
 <template>
-  <div class="lcs-button" :class="type" :style="{ display: display }">
+  <button class="lcs-button" :class="type" :style="{ display: display }">
     <slot> default button text </slot>
-  </div>
+  </button>
 </template>
 
 <script>
