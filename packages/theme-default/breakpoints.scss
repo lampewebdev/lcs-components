@@ -1,0 +1,40 @@
+$breakpoints: (
+    xs: 32rem,
+    sm: 48rem,
+    md: 64rem,
+    lg: 80rem,
+    xl: 96em,
+);
+
+@mixin respond-from($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+:root {
+    // each item in color map
+    @each $size, $value in $breakpoints {
+        --breakpoint-#{$size}: #{$value};
+    }
+}
+
+@each $size, $value in $breakpoints {
+    :export {
+        #{unquote($size)}: $value;
+    }
+}

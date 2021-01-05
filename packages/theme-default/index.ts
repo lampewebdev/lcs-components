@@ -1,3 +1,3 @@
-import ThemeDefault from "./src/index.vue";
+import * as breakpoints from "./breakpoints.scss";
 
-export default ThemeDefault;
+export default breakpoints;

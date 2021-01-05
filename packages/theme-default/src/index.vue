@@ -14,9 +14,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-.lcs-ThemeDefault {
-  /* your style */
-}
-</style>

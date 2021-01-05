@@ -20,7 +20,7 @@ if (isWin) {
 const newPackageName: string = argv._[0] as string;
 const newPackagePath: string = packagesFolder + newPackageName;
 
-// Check if the name is valod
+// Check if the name is valid
 const validNMPPackageName = /^(@[a-z0-9-~][a-z0-9-._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/;
 if (!validNMPPackageName.test(newPackageName)) {
   console.log(chalk.red("🛑 ") + "Not a valid package name");
@@ -33,14 +33,14 @@ if (fs.existsSync(newPackagePath)) {
   process.exit(0);
 }
 
-const newPackageNameCamelCaase: string = newPackageName
+const newPackageNameCamelCase: string = newPackageName
   .split("-")
   .map(
     (partOfTheName) => partOfTheName[0].toUpperCase() + partOfTheName.slice(1)
   )
   .join("");
 
-console.log(newPackageNameCamelCaase);
+console.log(newPackageNameCamelCase);
 // Start creating
 console.log("Creating " + chalk.red(newPackageName) + "!");
 fs.mkdirSync(newPackagePath, { recursive: true });
@@ -53,7 +53,7 @@ import indexTs from "./templates/indexTs";
 const filesToCreate = [
   {
     filepath: "/src/index.vue",
-    content: indexVue({ packageName: newPackageNameCamelCaase }),
+    content: indexVue({ packageName: newPackageNameCamelCase }),
   },
   {
     filepath: "/package.json",
@@ -61,7 +61,7 @@ const filesToCreate = [
   },
   {
     filepath: "/index.ts",
-    content: indexTs({ packageName: newPackageNameCamelCaase }),
+    content: indexTs({ packageName: newPackageNameCamelCase }),
   },
 ];
 

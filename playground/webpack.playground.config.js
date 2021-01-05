@@ -36,10 +36,17 @@ module.exports = {
               esModule: false,
             },
           },
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              sourceMap: true,
+            },
+          },
           {
             loader: "sass-loader",
             options: {
+              sourceMap: true,
               implementation: require("sass"),
             },
           },
