@@ -44,9 +44,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import LcsButton from "@lcs-components/button";
 
 export default defineComponent({
   name: "Playground",
+  components: {
+    LcsButton,
+  },
 });
 </script>
 
@@ -58,7 +62,7 @@ export default defineComponent({
 
 // a {
 //   color: var(--act-color);
-//}
+// }
 
 // .logo {
 //   background-color: var(--bkg-logo);

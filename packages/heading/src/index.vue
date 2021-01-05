@@ -15,7 +15,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss">
 h1 {
   font-weight: 400;
   font-style: normal;

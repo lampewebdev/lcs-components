@@ -3,13 +3,13 @@ $font-secondary: Montserrat, serif;
 $font-base-size: 1em;
 
 :root {
-  --font-primary: $font-primary;
-  --font-secondary: $font-secondary;
-  --font-base-size: $font-base-size;
+  --font-primary: #{$font-primary};
+  --font-secondary: #{$font-secondary};
+  --font-base-size: #{$font-base-size};
 }
 
 :export {
-  fontPrimary: $font-primary;
-  fontSecondary: $font-secondary;
-  fontBaseSize: $font-base-size;
+  fontPrimary: #{$font-primary};
+  fontSecondary: #{$font-secondary};
+  fontBaseSize: #{$font-base-size};
 }

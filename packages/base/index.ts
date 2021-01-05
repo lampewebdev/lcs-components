@@ -8,6 +8,4 @@ const base = {
   typography,
 };
 
-export default {
-  base,
-};
+export { base };

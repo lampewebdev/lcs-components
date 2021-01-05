@@ -11,36 +11,24 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.tsx?$/,
-      //   loader: "ts-loader",
-      //   options: {
-      //     appendTsSuffixTo: [/\.vue$/],
-      //   },
-      //   exclude: /node_modules/,
-      // },
       {
         test: /\.vue$/,
-        use: "vue-loader",
+        loader: "vue-loader",
       },
       {
         test: /\.(ts|js)x?$/,
         loader: "babel-loader",
       },
       {
-        test: /\.scss$/,
+        test: /\.s(a|c)ss$/,
         use: [
           {
             loader: "style-loader",
-            options: {
-              esModule: false,
-            },
           },
           {
             loader: "css-loader",
             options: {
-              modules: true,
-              sourceMap: true,
+              esModule: false,
             },
           },
           {

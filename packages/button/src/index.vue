@@ -37,7 +37,7 @@ export default defineComponent({
 .lcs-button {
   cursor: pointer;
   text-align: center;
-  font-size: 16px;
+  font-size: var(--font-base-size);
   line-height: 16px;
   font-weight: 400;
   border-style: solid;
