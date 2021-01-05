@@ -1,5 +1,9 @@
 <template>
-  <button class="lcs-button" :class="type" :style="{ display: display }">
+  <button
+    class="lcs-button"
+    :class="type"
+    :style="{ display: display, width: width }"
+  >
     <slot> default button text </slot>
   </button>
 </template>
@@ -21,13 +25,16 @@ export default defineComponent({
   },
   setup(props) {
     let display = ref("inline-block");
+    let width = ref("unset");
 
     if (props.block) {
       display.value = "block";
+      width.value = "100%";
     }
 
     return {
       display,
+      width,
     };
   },
 });
@@ -38,13 +45,13 @@ export default defineComponent({
   cursor: pointer;
   text-align: center;
   font-size: var(--font-base-size);
-  line-height: 16px;
+  line-height: var(--font-base-size);
   font-weight: 400;
   border-style: solid;
   border-width: 2px;
   padding: 10px 40px;
   text-transform: uppercase;
-  transition: all 0.2s linear;
+  transition: all 0.2s ease-out;
 }
 
 .lcs-button.primary:hover {

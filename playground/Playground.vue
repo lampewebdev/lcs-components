@@ -1,10 +1,15 @@
 <template>
-  <div>
+  <div data-theme="default">
     <h1>LampeCodeSchool</h1>
     <br /><br />
-    <div data-theme="default">
-      <h1>Default Theme</h1>
-      <h2>Buttons basic</h2>
+    <div>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+      <hr />
       <lcs-button> Primary </lcs-button>
       <lcs-button type="full"> Full </lcs-button>
       <lcs-button type="plain"> Plain </lcs-button>
@@ -16,8 +21,12 @@
     <br /><br />
 
     <div data-theme="dark">
-      <h1>Dark Theme</h1>
-      <h2>Buttons basic</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
       <lcs-button> Primary </lcs-button>
       <lcs-button type="full"> Full </lcs-button>
       <lcs-button type="plain"> Plain </lcs-button>
@@ -29,8 +38,12 @@
     <br /><br />
 
     <div data-theme="oled">
-      <h1>Oled Theme</h1>
-      <h2>Buttons basic</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
       <lcs-button> Primary </lcs-button>
       <lcs-button type="full"> Full </lcs-button>
       <lcs-button type="plain"> Plain </lcs-button>
