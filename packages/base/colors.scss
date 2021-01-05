@@ -1,0 +1,19 @@
+$text-color: #1a1c20;
+$bkg-color: #f6f6f6;
+$act-color: #f0a500;
+$bkg-logo: #1a1c20;
+
+:root,
+[data-theme] {
+    --text-color: $text-color;
+    --bkg-color: $bkg-color;
+    --act-color: $act-color;
+    --bkg-logo: $bkg-logo;
+}
+
+:export {
+    textColor: $text-color;
+    bkgColor: $bkg-color;
+    actColor: $act-color;
+    bkgLogo: $bkg-logo;
+}

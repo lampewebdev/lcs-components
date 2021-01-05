@@ -7,9 +7,10 @@
     "lint": "npx eslint -f codeframe --config='../../.eslintrc.js' --ext ts,vue ./"
   },
   "dependencies": {
+    "@lcs-components/base": "file:../packages/base",
     "@lcs-components/button": "file:../packages/button",
-    "@lcs-components/theme-default": "file:../packages/theme-default",
-    "@lcs-components/heading": "file:../packages/heading"
+    "@lcs-components/heading": "file:../packages/heading",
+    "@lcs-components/theme-default": "file:../packages/theme-default"
   },
   "devDependencies": {
     "eslint": "^7.17.0"

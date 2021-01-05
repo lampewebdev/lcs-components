@@ -27,7 +27,6 @@ $breakpoints: (
 }
 
 :root {
-    // each item in color map
     @each $size, $value in $breakpoints {
         --breakpoint-#{$size}: #{$value};
     }
