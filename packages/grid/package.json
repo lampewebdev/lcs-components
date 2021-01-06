@@ -1,0 +1,12 @@
+{
+  "name": "@lcs-components/grid",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "npx eslint -f codeframe --config='../../.eslintrc.js' --ext ts,vue ./"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0"
+  }
+}
