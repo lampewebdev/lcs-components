@@ -1,3 +1,9 @@
-import Grid from "./src/index.vue";
+import Container from "./src/Container.vue";
+import Row from "./src/Row.vue";
+import Column from "./src/Column.vue";
 
-export default Grid;
+export default {
+  Container,
+  Row,
+  Column,
+};
