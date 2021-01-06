@@ -9,7 +9,7 @@
   "dependencies": {
     "@lcs-components/base": "file:../packages/base",
     "@lcs-components/button": "file:../packages/button",
-    "@lcs-components/grid": "file: ../packages/grid",
+    "@lcs-components/grid": "file:../packages/grid",
     "@lcs-components/heading": "file:../packages/heading",
     "@lcs-components/theme-default": "file:../packages/theme-default"
   },

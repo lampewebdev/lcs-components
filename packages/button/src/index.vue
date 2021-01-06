@@ -24,8 +24,8 @@ export default defineComponent({
     },
   },
   setup(props) {
-    let display: string = ref("inline-block");
-    let width: string = ref("unset");
+    let display: string = ref<string>("inline-block");
+    let width: string = ref<string>("unset");
 
     if (props.block) {
       display.value = "block";

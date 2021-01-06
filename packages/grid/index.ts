@@ -1,9 +1,5 @@
-import Container from "./src/Container.vue";
-import Row from "./src/Row.vue";
-import Column from "./src/Column.vue";
+import LcsContainer from "./src/Container.vue";
+import LcsRow from "./src/Row.vue";
+import LcsColumn from "./src/Column.vue";
 
-export default {
-  Container,
-  Row,
-  Column,
-};
+export { LcsContainer, LcsRow, LcsColumn };

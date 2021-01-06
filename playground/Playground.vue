@@ -2,6 +2,20 @@
   <div data-theme="default">
     <h1>LampeCodeSchool</h1>
     <br /><br />
+    <div class="grid">
+      <lcs-container>
+        <lcs-row>
+          <lcs-column col="1">1</lcs-column>
+          <lcs-column col="1">1</lcs-column>
+          <lcs-column col="2">2</lcs-column>
+          <lcs-column col="1">1</lcs-column>
+          <lcs-column col="1">1</lcs-column>
+          <lcs-column col="2">2</lcs-column>
+          <lcs-column col="3">3</lcs-column>
+          <lcs-column col="1">1</lcs-column>
+        </lcs-row>
+      </lcs-container>
+    </div>
     <div class="m-a-xl">
       <h1 class="elevation-1">Heading 1</h1>
       <h2>Heading 2</h2>
@@ -58,16 +72,32 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import LcsButton from "@lcs-components/button";
+import { LcsContainer, LcsRow, LcsColumn } from "@lcs-components/grid";
 
 export default defineComponent({
   name: "Playground",
   components: {
     LcsButton,
+    LcsContainer,
+    LcsRow,
+    LcsColumn,
   },
 });
 </script>
 
 <style lang="scss">
+.grid {
+  text-align: center;
+  .col-1 {
+    background-color: salmon;
+  }
+  .col-2 {
+    background-color: royalblue;
+  }
+  .col-3 {
+    background-color: seagreen;
+  }
+}
 // b {
 //   color: var(--text-color);
 //   letter-spacing: 2px;

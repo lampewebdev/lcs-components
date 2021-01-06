@@ -1,7 +1,7 @@
 {
   "name": "@lcs-components/grid",
   "version": "0.0.0",
-  "main": "dist/index.js",
+  "main": "index.ts",
   "license": "MIT",
   "scripts": {
     "lint": "npx eslint -f codeframe --config='../../.eslintrc.js' --ext ts,vue ./"
