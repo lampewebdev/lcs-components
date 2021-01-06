@@ -8,7 +8,7 @@
   </button>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
@@ -24,8 +24,8 @@ export default defineComponent({
     },
   },
   setup(props) {
-    let display = ref("inline-block");
-    let width = ref("unset");
+    let display: string = ref("inline-block");
+    let width: string = ref("unset");
 
     if (props.block) {
       display.value = "block";
