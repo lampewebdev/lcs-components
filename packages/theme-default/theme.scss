@@ -1,10 +1,3 @@
-body,
-[data-theme] {
-  font-family: var(--font-primary);
-  background: var(--bkg-color);
-  font-size: var(--text-base-size);
-}
-
 [data-theme="dark"] {
   --text-color: #f6f6f6;
   --bkg-color: #1a1c20;

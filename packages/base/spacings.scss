@@ -1,0 +1,44 @@
+$spacings: (
+    zero: 0,
+    xs: 4,
+    sm: 8,
+    md: 16,
+    lg: 24,
+    xl: 32,
+    xxl: 48,
+);
+$sides: (top, bottom, left, right, all);
+
+@each $space, $value in $spacings {
+    @each $side in $sides {
+        @if $side == "all" {
+            .m-a-#{$space} {
+                margin: #{$value}px;
+            }
+
+            .p-a-#{$space} {
+                padding: #{$space}px;
+            }
+        } @else {
+            .m-#{str-slice($side, 0, 1)}#{$space} {
+                margin-#{$side}: #{$value}px;
+            }
+
+            .p-#{str-slice($side, 0, 1)}#{$space} {
+                padding-#{$side}: #{$value}px;
+            }
+        }
+    }
+}
+
+:root {
+    @each $space, $value in $spacings {
+        --spacing-#{$space}: #{$value};
+    }
+}
+
+@each $space, $value in $spacings {
+    :export {
+        #{unquote($space)}: $value;
+    }
+}

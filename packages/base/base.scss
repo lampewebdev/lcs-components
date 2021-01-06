@@ -2,5 +2,13 @@
 @use "./colors.scss";
 @use "./breakpoints.scss";
 @use "./typography.scss";
+@use "./spacings.scss";
 
 @use "./heading.scss";
+
+body,
+[data-theme] {
+  font-family: var(--font-primary);
+  background: var(--bkg-color);
+  font-size: var(--text-base-size);
+}
