@@ -5,14 +5,14 @@
     <div class="grid">
       <lcs-container>
         <lcs-row>
-          <lcs-column col="1">1</lcs-column>
-          <lcs-column col="1">1</lcs-column>
-          <lcs-column col="2">2</lcs-column>
-          <lcs-column col="1">1</lcs-column>
-          <lcs-column col="1">1</lcs-column>
-          <lcs-column col="2">2</lcs-column>
-          <lcs-column col="3">3</lcs-column>
-          <lcs-column col="1">1</lcs-column>
+          <lcs-column col="12" md="6">1</lcs-column>
+          <lcs-column col="6">2</lcs-column>
+          <lcs-column col="6">3</lcs-column>
+          <lcs-column col="1">4</lcs-column>
+          <lcs-column col="1">5</lcs-column>
+          <lcs-column col="2">6</lcs-column>
+          <lcs-column col="3">7</lcs-column>
+          <lcs-column col="1">8</lcs-column>
         </lcs-row>
       </lcs-container>
     </div>

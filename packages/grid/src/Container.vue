@@ -13,23 +13,38 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import "@lcs-components/base/breakpoints.scss";
+
 $grid-columns: 12;
-$grid-gutter: 24px !default;
+$grid-gutter: 6px !default;
 
 .lcs-container {
-  display: flex;
+  display: block;
   .lcs-row {
-    flex: 1 1 100%;
-    max-width: calc(100% + #{$grid-gutter});
-
+    display: flex;
+    flex-wrap: wrap;
     .lcs-column {
-      flex-direction: column;
-      float: left;
+      display: flex;
+      flex: 0 0 100%;
+      width: 100%;
       $n: $grid-columns;
       @while $n > 0 {
         &.col-#{$n} {
-          width: calc(100% / #{$grid-columns} * #{$n});
+          flex: 0 0 calc(((100% / #{$grid-columns}) * #{$n}));
+          max-width: calc(((100% / #{$grid-columns}) * #{$n}));
+          // margin-right: #{$grid-gutter / 2};
+          // margin-left: #{$grid-gutter / 2};
         }
+
+        @include respond-from("md") {
+          &.col-md-#{$n} {
+            flex: 0 0 calc(((100% / #{$grid-columns}) * #{$n}));
+            max-width: calc(((100% / #{$grid-columns}) * #{$n}));
+            // margin-right: #{$grid-gutter / 2};
+            // margin-left: #{$grid-gutter / 2};
+          }
+        }
+
         $n: $n - 1;
       }
     }

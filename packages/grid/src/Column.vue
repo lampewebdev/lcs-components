@@ -26,7 +26,7 @@ export default defineComponent({
     },
     xl: {
       type: Number,
-      required: true,
+      required: false,
       default: null,
     },
   },
@@ -34,6 +34,13 @@ export default defineComponent({
     let classList = "";
     if (props.col) {
       classList += `col-${props.col}`;
+    }
+    if (props.md) {
+      classList += ` col-md-${props.md}`;
+    }
+    console.log(props.xl);
+    if (props.xl) {
+      classList += ` col-xl-${props.xl}`;
     }
     return {
       classList,
