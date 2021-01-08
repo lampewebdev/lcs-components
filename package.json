@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --force-local",
     "lint": "lerna run lint --parallel --stream",
     "lint:fix": "npm run lint -- --fix",
     "new": "ts-node --project ./scripts/tsconfig.json ./scripts/new.ts",
@@ -48,7 +48,7 @@
     "vue": "^3.0.4",
     "vue-loader": "^16.1.2",
     "vue-style-loader": "^4.1.2",
-    "webpack": "^5.11.1",
+    "webpack": "^5.12.1",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.1",
     "yargs": "^16.2.0"

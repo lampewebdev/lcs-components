@@ -11,21 +11,21 @@ export default defineComponent({
   name: "LcsColumn",
   props: {
     col: {
-      type: Number,
+      type: String,
       required: true,
     },
     xs: {
-      type: Number,
+      type: String,
       required: false,
       default: null,
     },
     md: {
-      type: Number,
+      type: String,
       required: false,
       default: null,
     },
     xl: {
-      type: Number,
+      type: String,
       required: false,
       default: null,
     },
