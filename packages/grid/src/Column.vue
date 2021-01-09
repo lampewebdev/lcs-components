@@ -5,43 +5,44 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref, Ref } from "vue";
+import breakpoints from "../../base/breakpoint.exports.scss";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const props: any = {
+  col: {
+    type: String,
+    required: true,
+  },
+};
+Object.keys(breakpoints).forEach((breakpoint) => {
+  props[breakpoint] = {
+    type: String,
+    required: false,
+    default: null,
+  };
+});
+console.log(props);
 export default defineComponent({
   name: "LcsColumn",
-  props: {
-    col: {
-      type: String,
-      required: true,
-    },
-    xs: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    md: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    xl: {
-      type: String,
-      required: false,
-      default: null,
-    },
-  },
-  setup(props): { classList: string } {
-    let classList = "";
-    if (props.col) {
-      classList += `col-${props.col}`;
-    }
-    if (props.md) {
-      classList += ` col-md-${props.md}`;
-    }
-    console.log(props.xl);
-    if (props.xl) {
-      classList += ` col-xl-${props.xl}`;
-    }
+  props,
+  setup(props) {
+    type Breakpoint = keyof typeof props | "col";
+    let classList: Ref<string> = ref("");
+    const breakpointKeys = Object.keys(breakpoints);
+    const propKeys = Object.keys(props);
+
+    propKeys.forEach((propKey: string) => {
+      if (breakpointKeys.includes(propKey)) {
+        const point = props[propKey as Breakpoint];
+        if (point !== null) {
+          classList.value += ` col-${propKey}-${point}`;
+        }
+      } else if (propKey === "col") {
+        classList.value += ` col-${props.col}`;
+      }
+    });
+
     return {
       classList,
     };

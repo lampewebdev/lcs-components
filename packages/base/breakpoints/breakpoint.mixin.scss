@@ -1,10 +1,4 @@
-$breakpoints: (
-    xs: 32rem,
-    sm: 48rem,
-    md: 64rem,
-    lg: 80rem,
-    xl: 96em,
-);
+@use "../breakpoints/variables.scss";
 
 @mixin respond-from($breakpoint) {
     // If the key exists in the map
@@ -23,17 +17,5 @@ $breakpoints: (
         @media (max-width: map-get($breakpoints, $breakpoint)) {
             @content;
         }
-    }
-}
-
-:root {
-    @each $size, $value in $breakpoints {
-        --breakpoint-#{$size}: #{$value};
-    }
-}
-
-@each $size, $value in $breakpoints {
-    :export {
-        #{unquote($size)}: $value;
     }
 }

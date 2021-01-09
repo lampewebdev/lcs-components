@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, Ref } from "vue";
 
 export default defineComponent({
   name: "LcsButton",
@@ -24,8 +24,8 @@ export default defineComponent({
     },
   },
   setup(props) {
-    let display: string = ref<string>("inline-block");
-    let width: string = ref<string>("unset");
+    let display: Ref<string> = ref("inline-block");
+    let width: Ref<string> = ref("unset");
 
     if (props.block) {
       display.value = "block";

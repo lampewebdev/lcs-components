@@ -3,6 +3,7 @@ const { VueLoaderPlugin } = require("vue-loader");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { DefinePlugin } = require("webpack");
+const postcssPresetEnv = require("postcss-preset-env");
 
 module.exports = {
   mode: "development",
@@ -28,7 +29,33 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
+              importLoaders: 2,
+              modules: {
+                compileType: "module",
+                mode: "global",
+                // auto: true,
+                // exportGlobals: true,
+                // namedExport: true,
+                // exportLocalsConvention: "camelCase",
+                // exportOnlyLocals: false,
+              },
               esModule: false,
+              sourceMap: false,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    "postcss-preset-env",
+                    {
+                      // Options
+                    },
+                  ],
+                ],
+              },
             },
           },
           {

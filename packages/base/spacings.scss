@@ -17,14 +17,14 @@ $sides: (top, bottom, left, right, all);
             }
 
             .p-a-#{$space} {
-                padding: #{$space}px;
+                padding: #{$value}px;
             }
         } @else {
-            .m-#{str-slice($side, 0, 1)}#{$space} {
+            .m-#{str-slice($side, 0, 1)}-#{$space} {
                 margin-#{$side}: #{$value}px;
             }
 
-            .p-#{str-slice($side, 0, 1)}#{$space} {
+            .p-#{str-slice($side, 0, 1)}-#{$space} {
                 padding-#{$side}: #{$value}px;
             }
         }

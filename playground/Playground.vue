@@ -5,14 +5,9 @@
     <div class="grid">
       <lcs-container>
         <lcs-row>
-          <lcs-column col="12" md="6">1</lcs-column>
-          <lcs-column col="12" md="6">2</lcs-column>
-          <lcs-column col="12" md="6">3</lcs-column>
-          <lcs-column col="1">4</lcs-column>
-          <lcs-column col="1">5</lcs-column>
-          <lcs-column col="2">6</lcs-column>
-          <lcs-column col="3">7</lcs-column>
-          <lcs-column col="1">8</lcs-column>
+          <lcs-column class="one" col="6" sm="12" xs="10" md="8" xl="6" xxl="1">
+            1
+          </lcs-column>
         </lcs-row>
       </lcs-container>
     </div>
@@ -88,7 +83,7 @@ export default defineComponent({
 <style lang="scss">
 .grid {
   text-align: center;
-  .col-1 {
+  .one {
     background-color: salmon;
   }
   .col-2 {

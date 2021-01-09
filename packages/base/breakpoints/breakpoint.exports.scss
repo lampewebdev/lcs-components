@@ -1,0 +1,13 @@
+@import './breakpoints/variables.scss';
+
+:root {
+    @each $size, $value in $breakpoints {
+        --breakpoint-#{$size}: #{$value};
+    }
+}
+
+@each $size, $value in $breakpoints {
+    :export {
+        #{unquote($size)}: $value;
+    }
+}

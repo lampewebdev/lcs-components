@@ -1,4 +1,4 @@
-import breakpoints from "./breakpoints.scss";
+import breakpoints from "./breakpoints/variables.scss";
 import colors from "./colors.scss";
 import typography from "./typography.scss";
 
