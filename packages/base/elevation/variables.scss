@@ -20,19 +20,3 @@ $elevation-shadow: (
         0 15px 12px rgba(0, 0, 0, 0.22),
     ),
 );
-
-:root {
-    @each $number, $value in $elevation-shadow {
-        --elevation-#{$number}: #{$value};
-    }
-}
-
-@each $number, $value in $elevation-shadow {
-    .elevation-#{unquote($number)} {
-        box-shadow: $value;
-    }
-
-    :export {
-        #{unquote($number)}: $value;
-    }
-}

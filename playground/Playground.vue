@@ -4,7 +4,7 @@
     <br /><br />
     <div class="grid">
       <lcs-container>
-        <lcs-row>
+        <lcs-row justify-center>
           <lcs-column class="one" col="6" sm="12" xs="10" md="8" xl="6" xxl="1">
             1
           </lcs-column>

@@ -1,4 +1,4 @@
-@import './breakpoints/variables.scss';
+@import './variables.scss';
 
 :root {
     @each $size, $value in $breakpoints {

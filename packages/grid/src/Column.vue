@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, Ref } from "vue";
-import breakpoints from "../../base/breakpoint.exports.scss";
+import breakpoints from "../../base/breakpoints/exports.scss";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const props: any = {

@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+:root {
+    @each $space, $value in $spacings {
+        --spacing-#{$space}: #{$value};
+    }
+}
+
+@each $space, $value in $spacings {
+    :export {
+        #{unquote($space)}: $value;
+    }
+}

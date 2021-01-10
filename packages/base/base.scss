@@ -1,10 +1,19 @@
+// reset
 @use "./reset.scss";
-@use "./colors.scss";
-@use "./breakpoint.exports.scss";
-@use "./typography.scss";
-@use "./spacings.scss";
-@use "./elevation.scss";
-@use './grid.scss';
+
+// exports
+@use "./breakpoints/exports.scss" as breakpoints;
+@use "./colors/exports.scss" as colors;
+@use "./elevation/exports.scss" as elevation;
+@use "./spacings/exports.scss" as spacings;
+@use "./typography/exports.scss" as typography;
+@use "./grid/exports.scss" as grid;
+
+// class generator
+@use "./spacings/classGenerator.scss" as spacingClasses;
+@use "./grid/classGenerator.scss" as gridClasses;
+
+//
 @use "./heading.scss";
 
 body,

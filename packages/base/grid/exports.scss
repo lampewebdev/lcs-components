@@ -1,0 +1,10 @@
+@import "./variables.scss";
+
+:root {
+    --grid-gutter: #{$grid-gutter};
+    --grid-columns: #{$grid-columns};
+}
+
+:export {
+    gridGutter: #{$grid-gutter};
+}

@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+:root {
+    @each $number, $value in $elevation-shadow {
+        --elevation-#{$number}: #{$value};
+    }
+}
+
+@each $number, $value in $elevation-shadow {
+    .elevation-#{unquote($number)} {
+        box-shadow: $value;
+    }
+
+    :export {
+        #{unquote($number)}: $value;
+    }
+}

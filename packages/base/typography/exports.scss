@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+:root {
+    --font-heading: #{$font-heading};
+    --font-primary: #{$font-primary};
+    --font-secondary: #{$font-secondary};
+    --font-base-size: #{$font-base-size};
+}
+
+:export {
+    fontHeading: #{$font-heading};
+    fontPrimary: #{$font-primary};
+    fontSecondary: #{$font-secondary};
+    fontBaseSize: #{$font-base-size};
+}

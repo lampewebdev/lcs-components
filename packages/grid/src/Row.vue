@@ -1,5 +1,5 @@
 <template>
-  <div class="lcs-row">
+  <div class="lcs-row" :class="{ 'justify-center': justifyCenter }">
     <slot />
   </div>
 </template>
@@ -9,6 +9,15 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "LcsRow",
+  props: {
+    justifyCenter: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  setup(props) {
+    console.log(props.justifyCenter);
+  },
 });
 </script>
 
