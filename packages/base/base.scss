@@ -22,3 +22,8 @@ body,
   background: var(--bkg-color);
   font-size: var(--text-base-size);
 }
+
+::selection {
+  background: var(--act-color);
+  color: var(--font-primary);
+}
