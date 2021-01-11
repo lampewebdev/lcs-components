@@ -17,10 +17,6 @@
         display: flex;
         flex-wrap: wrap;
 
-        &.justify-center {
-            justify-content: center;
-        }
-
         .lcs-column {
             display: flex;
             flex: 0 0 100%;
