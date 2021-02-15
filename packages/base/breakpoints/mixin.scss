@@ -1,4 +1,4 @@
-@use "../breakpoints/variables.scss";
+@import "./variables.scss";
 
 @mixin respond-from($breakpoint) {
     // If the key exists in the map

@@ -1,0 +1,13 @@
+{
+  "name": "@lcs-components/navbar",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "npx eslint -f codeframe --config='../../.eslintrc.js' --ext ts,vue ./"
+  },
+  "devDependencies": {
+    "@lcs-components/base": "file:../base",
+    "eslint": "^7.17.0"
+  }
+}

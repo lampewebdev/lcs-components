@@ -17,3 +17,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.lcs-container {
+  min-height: 100vh;
+}
+</style>

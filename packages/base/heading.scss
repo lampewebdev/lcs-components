@@ -4,42 +4,44 @@ h3,
 h4,
 h5,
 h6 {
-    text-decoration: var(--act-color) underline;
+    font-family: var(--font-primary);
+    // text-decoration: var(--act-color) underline;
     font-family: var(--font-heading);
     color: var(--text-color);
+    width: 100%;
 }
 
 h1 {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 3.5rem;
-    line-height: 3.5rem;
+    line-height: 3.8rem;
 }
 h2 {
-    font-weight: 200;
+    font-weight: 400;
     font-size: 2.5rem;
-    line-height: 2.5rem;
+    line-height: 2.8rem;
 }
 
 h3 {
-    font-weight: 100;
+    font-weight: 700;
     font-size: 2.2rem;
-    line-height: 2.2rem;
+    line-height: 2.8rem;
 }
 
 h4 {
-    font-weight: 100;
+    font-weight: 200;
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 2.3rem;
 }
 
 h5 {
-    font-weight: 100;
+    font-weight: 200;
     font-size: 1.75rem;
-    line-height: 1.75rem;
+    line-height: 2rem;
 }
 
 h6 {
-    font-weight: 100;
+    font-weight: 200;
     font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
 }

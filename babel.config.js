@@ -8,11 +8,18 @@ module.exports = {
     ],
     "@babel/typescript",
   ],
-  plugins: ["@vue/babel-plugin-jsx", "@babel/transform-runtime"],
+  plugins: [
+    "@babel/plugin-transform-spread",
+    "@vue/babel-plugin-jsx",
+    "@babel/transform-runtime",
+  ],
   overrides: [
     {
       test: /\.vue$/,
-      plugins: ["@babel/transform-typescript"],
+      plugins: [
+        "@babel/plugin-transform-spread",
+        "@babel/transform-typescript",
+      ],
     },
   ],
 };

@@ -22,7 +22,6 @@ Object.keys(breakpoints).forEach((breakpoint) => {
     default: null,
   };
 });
-console.log(props);
 export default defineComponent({
   name: "LcsColumn",
   props,

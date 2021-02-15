@@ -7,13 +7,16 @@
     "lint": "npx eslint -f codeframe --config='../../.eslintrc.js' --ext ts,vue ./"
   },
   "dependencies": {
+    "@lcs-components/aspectratio": "file:../packages/aspectratio",
     "@lcs-components/base": "file:../packages/base",
     "@lcs-components/button": "file:../packages/button",
     "@lcs-components/grid": "file:../packages/grid",
     "@lcs-components/heading": "file:../packages/heading",
+    "@lcs-components/navbar": "file:../packages/navbar",
+    "@lcs-components/slider": "file:../packages/slider",
     "@lcs-components/theme-default": "file:../packages/theme-default"
   },
   "devDependencies": {
-    "eslint": "^7.17.0"
+    "eslint": "^7.18.0"
   }
 }
