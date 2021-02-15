@@ -14,6 +14,11 @@
     <lcs-row class="m-l-md m-r-md">
       <H3> Learn Professions that are in High-deamend right now! </H3>
     </lcs-row>
+    <lcs-course-card-list>
+      <lcs-course-card />
+      <lcs-course-card />
+    </lcs-course-card-list>
+
     <!-- <lcs-row>
       <lcs-column col="12">
         <h1>Heading 1</h1>
@@ -75,6 +80,7 @@ import { defineComponent } from "vue";
 import LcsButton from "@lcs-components/button";
 import { LcsContainer, LcsRow, LcsColumn } from "@lcs-components/grid";
 import { LcsNavbar, LcsNavbarItem } from "@lcs-components/navbar";
+import { LcsCourseCard, LcsCourseCardList } from "@lcs-components/course-card";
 
 export default defineComponent({
   name: "Playground",
@@ -85,6 +91,8 @@ export default defineComponent({
     LcsColumn,
     LcsNavbar,
     LcsNavbarItem,
+    LcsCourseCardList,
+    LcsCourseCard,
   },
 });
 </script>

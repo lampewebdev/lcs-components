@@ -10,6 +10,7 @@
     "@lcs-components/aspectratio": "file:../packages/aspectratio",
     "@lcs-components/base": "file:../packages/base",
     "@lcs-components/button": "file:../packages/button",
+    "@lcs-components/course-card": "file:../packages/course-card",
     "@lcs-components/grid": "file:../packages/grid",
     "@lcs-components/heading": "file:../packages/heading",
     "@lcs-components/navbar": "file:../packages/navbar",
@@ -17,6 +18,7 @@
     "@lcs-components/theme-default": "file:../packages/theme-default"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.4",
     "eslint": "^7.18.0"
   }
 }

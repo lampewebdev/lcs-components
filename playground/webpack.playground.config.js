@@ -12,6 +12,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+        },
+      },
+      {
         test: /\.vue$/,
         loader: "vue-loader",
       },
@@ -41,7 +48,7 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: [["postcss-preset-env", {}]],
+                plugins: [["postcss-preset-env", {}], require("autoprefixer")],
               },
             },
           },
@@ -77,6 +84,7 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     historyApiFallback: true,
+    contentBase: "./playground/public",
     port: 3001,
   },
 };
