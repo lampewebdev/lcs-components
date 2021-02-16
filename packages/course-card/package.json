@@ -7,6 +7,7 @@
     "lint": "npx eslint -f codeframe --config='../../.eslintrc.js' --ext ts,vue ./"
   },
   "devDependencies": {
+    "@lcs-components/base": "file:../base",
     "eslint": "^7.17.0"
   }
 }

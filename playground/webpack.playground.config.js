@@ -86,5 +86,6 @@ module.exports = {
     historyApiFallback: true,
     contentBase: "./playground/public",
     port: 3001,
+    hot: true,
   },
 };

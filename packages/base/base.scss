@@ -8,6 +8,7 @@
 @use "./spacings/exports.scss" as spacings;
 @use "./typography/exports.scss" as typography;
 @use "./grid/exports.scss" as grid;
+@use "./rounded/exports.scss" as rounded;
 
 // class generator
 @use "./spacings/classGenerator.scss" as spacingClasses;

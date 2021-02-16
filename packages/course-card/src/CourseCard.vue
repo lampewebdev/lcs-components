@@ -1,52 +1,55 @@
 <template>
-  <div class="lcs-CourseCard" :style="{ backgroundColor: bgColor }">
+  <div
+    class="lcs-CourseCard pa-5 pa-sm-4 rounded-3"
+    :style="{ backgroundColor: course.color }"
+  >
     <div class="information">
       <div class="subtext">Profession</div>
-      <div class="course">Frontend Developer</div>
-      <div class="duration">24 months</div>
+      <div class="course pt-4 pt-sm-1">{{ course.name }}</div>
+      <div class="duration pt-4 pt-sm-1">{{ course.duration }}</div>
     </div>
-    <div class="illustration">
-      <img src="/courseImages/frontend.svg" alt="" />
+    <div class="illustration pb-sm-4">
+      <img :src="course.image" alt="" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
+type Course = {
+  name: string;
+  duration: string;
+  image: string;
+  color: string;
+};
 export default defineComponent({
   name: "LcsCourseCard",
   props: {
-    bgColor: {
-      type: String,
-      default: "#AAD9CD",
+    course: {
+      type: Object,
+      required: true,
+      validator: function (course: Course) {
+        return typeof course.name === "string";
+      },
     },
-  },
-  setup() {
-    // your code
   },
 });
 </script>
 
 <style lang="scss" scoped>
+@import "~@lcs-components/base/breakpoints/mixin.scss";
+
 .lcs-CourseCard {
   cursor: pointer;
-
   position: relative;
-  padding: 30px;
-
   display: flex;
   flex: 1 0 auto;
   justify-content: space-between;
 
   & .course {
-    padding-top: 10px;
     font-size: 32px;
     font-weight: 900;
-  }
-
-  & .duration {
-    position: absolute;
-    bottom: 20px;
   }
 
   .illustration {
@@ -54,8 +57,17 @@ export default defineComponent({
   }
 
   .illustration img {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: 100%;
+  }
+}
+@include respond-to("sm") {
+  .lcs-CourseCard {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 </style>

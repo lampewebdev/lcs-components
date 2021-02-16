@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+:root {
+    @each $number, $value in $border-radius {
+        --border-radius-#{$number}: #{$value};
+    }
+}
+
+@each $number, $value in $border-radius {
+    .rounded-#{unquote($number)} {
+        border-radius: $value;
+    }
+
+    :export {
+        #{unquote($number)}: $value;
+    }
+}

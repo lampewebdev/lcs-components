@@ -1,7 +1,7 @@
 <template>
   <ul class="lcs-navBar" :class="{ active: active }">
     <li class="logo-wrapper">
-      <div class="logo">Skillcrate</div>
+      <div class="logo">DevCrate</div>
     </li>
     <slot />
     <li class="menu" @click="onToggleMenu">
@@ -38,7 +38,6 @@ export default defineComponent({
 
 .lcs-navBar {
   height: 60px;
-  padding: 0 15px;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -51,7 +50,6 @@ export default defineComponent({
     letter-spacing: 1px;
     flex: 1;
     order: 0;
-    padding: 10px;
     & .logo {
       user-select: none;
       cursor: pointer;

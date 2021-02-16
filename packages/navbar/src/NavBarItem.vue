@@ -1,5 +1,5 @@
 <template>
-  <ul class="lcs-Navbar-item" @click="closeMenu">
+  <ul class="lcs-Navbar-item py-sm-2 px-2 px-sm-0" @click="closeMenu">
     <slot />
   </ul>
 </template>
@@ -21,14 +21,13 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .lcs-Navbar-item {
-  padding: 10px 20px;
   width: auto;
   order: 1;
   position: relative;
   display: flex;
   width: auto;
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: 500;
   color: var(--text-color);
   user-select: none;
   cursor: pointer;

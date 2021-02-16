@@ -1,22 +1,102 @@
 @import "./variables.scss";
+@import "../breakpoints/variables.scss";
+@import "../breakpoints/mixin.scss";
 
+// normal spacings
 @each $space, $value in $spacings {
     @each $side in $sides {
         @if $side == "all" {
-            .m-a-#{$space} {
+            .ma-#{$space} {
                 margin: #{$value}px;
             }
 
-            .p-a-#{$space} {
+            .pa-#{$space} {
                 padding: #{$value}px;
             }
         } @else {
-            .m-#{str-slice($side, 0, 1)}-#{$space} {
+            .m#{str-slice($side, 0, 1)}-#{$space} {
                 margin-#{$side}: #{$value}px;
             }
 
-            .p-#{str-slice($side, 0, 1)}-#{$space} {
+            .p#{str-slice($side, 0, 1)}-#{$space} {
                 padding-#{$side}: #{$value}px;
+            }
+        }
+    }
+}
+
+// breakpoint spacings
+@each $space, $value in $spacings {
+    @each $side in $sides {
+        @each $breakpoint, $breakpointKey in $breakpoints {
+            @if $side == "all" {
+                @include respond-to($breakpoint) {
+                    .ma-#{$breakpoint}-#{$space} {
+                        margin: #{$value}px;
+                    }
+
+                    .pa-#{$breakpoint}-#{$space} {
+                        padding: #{$value}px;
+                    }
+                }
+            } @else {
+                @include respond-to($breakpoint) {
+                    .m#{str-slice($side, 0, 1)}-#{$breakpoint}-#{$space} {
+                        margin-#{$side}: #{$value}px;
+                    }
+
+                    .p#{str-slice($side, 0, 1)}-#{$breakpoint}-#{$space} {
+                        padding-#{$side}: #{$value}px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@each $space, $value in $spacings {
+    .mx-#{$space} {
+        margin-left: #{$value}px;
+        margin-right: #{$value}px;
+    }
+
+    .px-#{$space} {
+        padding-left: #{$value}px;
+        padding-right: #{$value}px;
+    }
+
+    .my-#{$space} {
+        margin-top: #{$value}px;
+        margin-bottom: #{$value}px;
+    }
+
+    .py-#{$space} {
+        padding-top: #{$value}px;
+        padding-bottom: #{$value}px;
+    }
+}
+
+@each $space, $value in $spacings {
+    @each $breakpoint, $breakpointKey in $breakpoints {
+        @include respond-to($breakpoint) {
+            .mx-#{$breakpoint}-#{$space} {
+                margin-left: #{$value}px;
+                margin-right: #{$value}px;
+            }
+
+            .px-#{$breakpoint}-#{$space} {
+                padding-left: #{$value}px;
+                padding-right: #{$value}px;
+            }
+
+            .my-#{$breakpoint}-#{$space} {
+                margin-top: #{$value}px;
+                margin-bottom: #{$value}px;
+            }
+
+            .py-#{$breakpoint}-#{$space} {
+                padding-top: #{$value}px;
+                padding-bottom: #{$value}px;
             }
         }
     }

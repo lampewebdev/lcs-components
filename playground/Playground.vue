@@ -1,22 +1,52 @@
 <template>
-  <lcs-container data-theme="default">
-    <lcs-navbar class="m-b-lg">
-      <lcs-navbar-item> HOME </lcs-navbar-item>
-      <lcs-navbar-item> COURSES </lcs-navbar-item>
-      <lcs-navbar-item> BLOG </lcs-navbar-item>
-      <lcs-navbar-item>
-        <lcs-button> Login </lcs-button>
-      </lcs-navbar-item>
-      <lcs-navbar-item>
-        <lcs-button type="full"> Sing Up </lcs-button>
-      </lcs-navbar-item>
-    </lcs-navbar>
-    <lcs-row class="m-l-md m-r-md">
+  <lcs-navbar data-theme="default" class="pl-5 pr-5 pt-4">
+    <lcs-navbar-item> HOME </lcs-navbar-item>
+    <lcs-navbar-item> COURSES </lcs-navbar-item>
+    <lcs-navbar-item> BLOG </lcs-navbar-item>
+    <lcs-navbar-item>
+      <lcs-button> Login </lcs-button>
+    </lcs-navbar-item>
+    <lcs-navbar-item>
+      <lcs-button type="full"> Sing Up </lcs-button>
+    </lcs-navbar-item>
+  </lcs-navbar>
+  <lcs-container data-theme="default" class="pa-5">
+    <lcs-row class="">
       <H3> Learn Professions that are in High-deamend right now! </H3>
     </lcs-row>
-    <lcs-course-card-list>
-      <lcs-course-card />
-      <lcs-course-card />
+    <lcs-course-card-list class="">
+      <lcs-course-card
+        :course="{
+          name: 'Frontend Developer',
+          duration: '24 months',
+          color: '#A15D98',
+          image: 'courseimages/frontend.svg',
+        }"
+      />
+      <lcs-course-card
+        :course="{
+          name: 'Backend Developer',
+          duration: '24 months',
+          color: '#AAD9CD',
+          image: 'courseimages/backend.svg',
+        }"
+      />
+      <lcs-course-card
+        :course="{
+          name: 'React Developer',
+          duration: '12 months',
+          color: '#4382BB',
+          image: 'courseimages/react.svg',
+        }"
+      />
+      <lcs-course-card
+        :course="{
+          name: 'Tester Developer',
+          duration: '12 months',
+          color: '#DC828F',
+          image: 'courseimages/test.svg',
+        }"
+      />
     </lcs-course-card-list>
 
     <!-- <lcs-row>
